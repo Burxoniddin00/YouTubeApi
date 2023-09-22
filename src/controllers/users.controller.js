@@ -16,10 +16,11 @@ export const GET = async (req, res) => {
           message: "Bunday users yo'q regiseter qiling",
         });
       data = user;
-    } else return;
-    res.send({
-      status: 200,
-        message: "siz kira olmaysiz sizda token yoq logindan oting",
+    }
+    return res.send({
+      status: 202,
+      data,
+      message: "ok",
     });
   } catch (error) {
     return res.send({
